@@ -1,0 +1,36 @@
+{
+  "name": "@bul/pool",
+  "version": "1.0.0",
+  "description": "Queue & throttle async tasks in pool",
+  "main": "dist/index.js",
+  "repository": "https://github.com/hoanganh25991/node-pool.git",
+  "author": "Anh Le Hoang <lehoanganh25991@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "jest",
+    "build": "tsc --build"
+  },
+  "devDependencies": {
+    "add": "^2.0.6",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.2",
+    "yarn": "^1.12.3"
+  },
+  "jest": {
+    "verbose": true,
+    "preset": "ts-jest",
+    "collectCoverage": true,
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "test-cases.*",
+      "__tests__/manual/.*.js$",
+      "__tests__/.*.mock.js$",
+      "(/)?dist/.*.js$"
+    ]
+  },
+  "dependencies": {
+    "@types/jest": "^23.3.10"
+  }
+}
