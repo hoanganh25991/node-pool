@@ -1,0 +1,17 @@
+branches:
+  only:
+    - master
+
+language: node_js
+
+node_js:
+  - '10.13.0'
+
+cache:
+  - yarn
+
+script:
+  - yarn test
+
+after_script:
+  - yarn coveralls

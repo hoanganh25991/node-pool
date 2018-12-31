@@ -9,10 +9,12 @@
   "private": false,
   "scripts": {
     "test": "jest",
-    "build": "tsc --build"
+    "build": "tsc --build",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "devDependencies": {
     "add": "^2.0.6",
+    "coveralls": "^3.0.2",
     "jest": "^23.6.0",
     "ts-jest": "^23.10.5",
     "typescript": "^3.2.2",
