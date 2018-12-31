@@ -10,6 +10,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsc --build",
+    "publish:it": "npm publish --access=public",
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "devDependencies": {

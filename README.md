@@ -1,5 +1,9 @@
 # Pool
 
+[![npm version](https://badge.fury.io/js/%40bul%2Fpool.svg)](https://badge.fury.io/js/%40bul%2Fpool)
+[![Coverage Status](https://coveralls.io/repos/github/hoanganh25991/node-pool/badge.svg?branch=master)](https://coveralls.io/github/hoanganh25991/node-pool?branch=master)
+[![Build Status](https://travis-ci.org/hoanganh25991/node-pool.svg?branch=master)](https://travis-ci.org/hoanganh25991/node-pool)
+
 When we have too much tasks in parallel, `pool` is simple way to queue & throttle tasks efficiently.
 
 ## Usage
