@@ -18,28 +18,36 @@ Steps:
 
 ```js
 import Pool from '@bul/pool';
+import fetch from 'isomorphic-fetch';
 
-// Simple async task
-const demoAsyncTask = url =>
-  fetch(url)
-    .then(res => res.text())
-    .catch(err => console.log('[fetch][ERR]', err));
+const runDemo = async () => {
+  // Simple async task
+  const demoAsyncTask = url =>
+    fetch(url)
+      .then(res => res.text())
+      .catch(console.log);
 
-const urls = [
-  'https://google.com', //
-  'https://medium.com',
-  'https://github.com' /* other urls */,
-];
+  const urls = [
+    'https://google.com', //
+    'https://medium.com',
+    'https://github.com',
+    /* other urls */
+  ];
 
-// Create pool
-const pool = Pool(5);
+  // 1. Create pool
+  const pool = Pool(5);
 
-// Push async task into pool
-urls.map(url => pool.push(demoAsyncTask, url /* ALL args right after async func */));
+  // 2. Push async task into pool
+  urls.map(url => pool.push(demoAsyncTask, url /* Pass ALL async tasks' args here */));
 
-// Wait for pool idle
-await pool.idle();
+  // 3.1 Wait for pool idle
+  await pool.idle();
 
-// Get result after all async tasks done
-const result = pool.getResult();
+  // 3.2 Get result after all async tasks done
+  return pool.getResult();
+};
+
+runDemo()
+  .then(console.log)
+  .catch(console.log);
 ```

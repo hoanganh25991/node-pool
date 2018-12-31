@@ -2,7 +2,7 @@
   "name": "@bul/pool",
   "version": "1.0.0",
   "description": "Queue & throttle async tasks in pool",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "repository": "https://github.com/hoanganh25991/node-pool.git",
   "author": "Anh Le Hoang <lehoanganh25991@gmail.com>",
   "license": "MIT",
